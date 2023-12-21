@@ -31,7 +31,7 @@ mqtt_user = configuration['mqtt_user']
 mqtt_password = configuration['mqtt_password']
 TOPIC = configuration['mqtt_topic']
 
-client_id = 'stib-mqtt-gtfs'
+client_id = f'stib-mqtt-{random.randint(0, 1000)}'
 
 STIB = StibData(STIB_API_KEY)
 STIB_LINES = []
