@@ -1,0 +1,642 @@
+[
+    {
+        "route_id": "43",
+        "direction_id": "CITY",
+        "stop_id": "1414",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812012,
+        "stop_lon": 4.318754,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "1414"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "CITY",
+        "stop_id": "1414",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812012,
+        "stop_lon": 4.318754,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "1414"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "CITY",
+        "stop_id": "1414",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812012,
+        "stop_lon": 4.318754,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "1414"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "10",
+        "direction_id": "SUBURB",
+        "stop_id": "5121F",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.81194,
+        "stop_lon": 4.319148,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "82",
+        "route_type": "TRAM",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "5121"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "10",
+        "direction_id": "CITY",
+        "stop_id": "5121F",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.81194,
+        "stop_lon": 4.319148,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "82",
+        "route_type": "TRAM",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "5121"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "47",
+        "direction_id": "SUBURB",
+        "stop_id": "5161",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.811535,
+        "stop_lon": 4.318751,
+        "route_long_name": "TRONE - FOREST (BERVOETS)",
+        "route_short_name": "54",
+        "route_type": "BUS",
+        "route_color": "E43C2E",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5161"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "45",
+        "direction_id": "SUBURB",
+        "stop_id": "5161",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.811535,
+        "stop_lon": 4.318751,
+        "route_long_name": "UCCLE-STALLE - CLEMENCE EVERARD",
+        "route_short_name": "74",
+        "route_type": "BUS",
+        "route_color": "A67CB0",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5161"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": "SUBURB",
+        "stop_id": "5915",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812101,
+        "stop_lon": 4.318835,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "5915"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "47",
+        "direction_id": "CITY",
+        "stop_id": "5915",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812101,
+        "stop_lon": 4.318835,
+        "route_long_name": "TRONE - FOREST (BERVOETS)",
+        "route_short_name": "54",
+        "route_type": "BUS",
+        "route_color": "E43C2E",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5915"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "45",
+        "direction_id": "CITY",
+        "stop_id": "5915",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812101,
+        "stop_lon": 4.318835,
+        "route_long_name": "UCCLE-STALLE - CLEMENCE EVERARD",
+        "route_short_name": "74",
+        "route_type": "BUS",
+        "route_color": "A67CB0",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5915"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "SUBURB",
+        "stop_id": "5915",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812101,
+        "stop_lon": 4.318835,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5915"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "SUBURB",
+        "stop_id": "5915",
+        "stop_name": "FOREST CENTRE",
+        "stop_lat": 50.812101,
+        "stop_lon": 4.318835,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "5915"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": "SUBURB",
+        "stop_id": "1411",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805602,
+        "stop_lon": 4.313003,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "1411",
+            "3527"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "SUBURB",
+        "stop_id": "1411",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805602,
+        "stop_lon": 4.313003,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "1411",
+            "3527"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": "CITY",
+        "stop_id": "3193",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805705,
+        "stop_lon": 4.312942,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3193",
+            "3528"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "CITY",
+        "stop_id": "3193",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805705,
+        "stop_lon": 4.312942,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3193",
+            "3528"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "SUBURB",
+        "stop_id": "3241",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805989,
+        "stop_lon": 4.311602,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "3241"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "CITY",
+        "stop_id": "3247",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.807399,
+        "stop_lon": 4.312267,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "3247"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": 0,
+        "stop_id": "3527",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805672,
+        "stop_lon": 4.314783,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": 0,
+        "stop_id": "3527",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.805672,
+        "stop_lon": 4.314783,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": 1,
+        "stop_id": "3528",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.806243,
+        "stop_lon": 4.314165,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": 1,
+        "stop_id": "3528",
+        "stop_name": "MAX WALLER",
+        "stop_lat": 50.806243,
+        "stop_lon": 4.314165,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": "CITY",
+        "stop_id": "3194",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809427,
+        "stop_lon": 4.313018,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3194",
+            "5152"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "CITY",
+        "stop_id": "3194",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809427,
+        "stop_lon": 4.313018,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "3194"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "CITY",
+        "stop_id": "3194",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809427,
+        "stop_lon": 4.313018,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3194",
+            "5152"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": "SUBURB",
+        "stop_id": "3196",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809701,
+        "stop_lon": 4.313231,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3196",
+            "5719"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "84",
+        "direction_id": "SUBURB",
+        "stop_id": "3196",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809701,
+        "stop_lon": 4.313231,
+        "route_long_name": "GARE CENTRALE - STALLE P",
+        "route_short_name": "N12",
+        "route_type": "BUS",
+        "route_color": "ED7807",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "3196"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": "SUBURB",
+        "stop_id": "3196",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809701,
+        "stop_lon": 4.313231,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [
+            "3196",
+            "5719"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": 1,
+        "stop_id": "5152",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.810537,
+        "stop_lon": 4.317971,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "47",
+        "direction_id": "SUBURB",
+        "stop_id": "5152",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.810537,
+        "stop_lon": 4.317971,
+        "route_long_name": "TRONE - FOREST (BERVOETS)",
+        "route_short_name": "54",
+        "route_type": "BUS",
+        "route_color": "E43C2E",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5152"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "45",
+        "direction_id": "SUBURB",
+        "stop_id": "5152",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.810537,
+        "stop_lon": 4.317971,
+        "route_long_name": "UCCLE-STALLE - CLEMENCE EVERARD",
+        "route_short_name": "74",
+        "route_type": "BUS",
+        "route_color": "A67CB0",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5152"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": 1,
+        "stop_id": "5152",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.810537,
+        "stop_lon": 4.317971,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "43",
+        "direction_id": 0,
+        "stop_id": "5719",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809901,
+        "stop_lon": 4.317548,
+        "route_long_name": "GARE DU MIDI - LOT STATION",
+        "route_short_name": "50",
+        "route_type": "BUS",
+        "route_color": "B4BD10",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "47",
+        "direction_id": "CITY",
+        "stop_id": "5719",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809901,
+        "stop_lon": 4.317548,
+        "route_long_name": "TRONE - FOREST (BERVOETS)",
+        "route_short_name": "54",
+        "route_type": "BUS",
+        "route_color": "E43C2E",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5719"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "45",
+        "direction_id": "CITY",
+        "stop_id": "5719",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809901,
+        "stop_lon": 4.317548,
+        "route_long_name": "UCCLE-STALLE - CLEMENCE EVERARD",
+        "route_short_name": "74",
+        "route_type": "BUS",
+        "route_color": "A67CB0",
+        "route_text_color": "FFFFFF",
+        "stop_ids": [
+            "5719"
+        ],
+        "route_lons": [],
+        "route_lats": []
+    },
+    {
+        "route_id": "91",
+        "direction_id": 0,
+        "stop_id": "5719",
+        "stop_name": "SAINT-DENIS",
+        "stop_lat": 50.809901,
+        "stop_lon": 4.317548,
+        "route_long_name": "GARE DE BERCHEM - DROGENBOS",
+        "route_short_name": "T82",
+        "route_type": "BUS",
+        "route_color": "91BEE7",
+        "route_text_color": "000000",
+        "stop_ids": [],
+        "route_lons": [],
+        "route_lats": []
+    }
+]

@@ -174,6 +174,9 @@ class CommonFunctions:
                 elif response.status == 404:
                     message = "404: incorrect API request"
                     raise HttpException(message, await response.text(), response.status)
+                elif response.status == 400:
+                    message = "400: incorrect API request"
+                    raise HttpException(message, await response.text(), response.status)
 
                 else:
                     message = f"Unexpected status code {response.status}."
