@@ -150,45 +150,55 @@ def getGTFSAttributes():
     return attributes
 
 def getSTIBAttributes():
-    types = ["Tram", "Train", "Metro", "Bus"]
     row=[]
     stop_ids = asyncio.run(STIB.get_gtfs_stops(STOP_NAMES))
     lines_by_stops = asyncio.run(STIB.get_lines_by_stops(stop_ids['stop_ids']))
+    passing_times = asyncio.run(STIB.get_passing_times(stop_ids["stop_ids"]))
+    waiting_times = passing_times["waiting_times"]
     routes = asyncio.run(STIB.get_routes_by_lines(lines_by_stops['lines']))
     attributes = {}
-    for idx, rows in lines_by_stops["line_details"].items():
-        for row in rows:
-            row['stop_ids'] = []
-            for point in row['points']:
-                if point["id"] in stop_ids["stop_ids"]:
-                    stop_id = point["id"]
-                    stop_id_num = str(''.join(i for i in str(stop_id) if i.isdigit())) 
-                    row["stop_id"] = stop_ids["stop_fields"][stop_id_num]["stop_id"]
-                    row["stop_name"] = stop_ids["stop_fields"][stop_id_num]["stop_name"]
-                    row["stop_lat"] = stop_ids["stop_fields"][stop_id_num]["stop_coordinates"]["lat"]
-                    row["stop_lon"] = stop_ids["stop_fields"][stop_id_num]["stop_coordinates"]["lon"]
-            if row["line_id"] in routes:
-                row["route_long_name"] = routes[row["line_id"]]["route_long_name"]
-                row["route_type"] = routes[row["line_id"]]["route_type"].upper()
-                row["route_color"] = routes[row["line_id"]]["route_color"]
-                row["route_id"] = routes[row["line_id"]]["route_id"]
-                destination = row["destination"][LANG]
-            name = f'STIB {row["stop_name"]} - {row["route_type"]} {row["line_id"]} - {destination}'
-            row["direction_id"] = row['direction'].upper()
-            row["route_short_name"] = row["line_id"]
-            row["route_text_color"] = "000000"
-
-            if name in attributes:
-                pointid = ''.join(i for i in str(row["stop_id"]) if i.isdigit()) 
-                attributes[name]['stop_ids'].append(pointid)
-            else:
-                pointid = ''.join(i for i in str(row["stop_id"]) if i.isdigit()) 
-                row['stop_ids'].append(pointid)
-                attributes[name] = row
-            if row['stop_id'] not in STIB_STOP_IDS:
-                STIB_STOP_IDS.append(row['stop_id'])
-            if row['line_id'] not in STIB_LINES:
-                STIB_LINES.append(row['line_id'])
+    if len(routes) == 0:
+        print(f"routes empty, aborting")
+        return attributes
+    for stop_id in stop_ids["stop_ids"]:
+        stop_id_num = str(''.join(i for i in str(stop_id) if i.isdigit())) 
+        if stop_id_num in waiting_times:
+            print(waiting_times[stop_id_num])
+            for idr, row in waiting_times[stop_id_num].items():
+                print(row)
+                row['stop_ids'] = []
+                row['line_id'] = row['lineid']
+                row["stop_id"] = row['pointid']
+                row["stop_name"] = stop_ids["stop_fields"][stop_id_num]["stop_name"]
+                row["stop_lat"] = stop_ids["stop_fields"][stop_id_num]["stop_coordinates"]["lat"]
+                row["stop_lon"] = stop_ids["stop_fields"][stop_id_num]["stop_coordinates"]["lon"]      
+                destination = str(row['pointid'])
+                if row["line_id"] in routes:
+                    row["route_long_name"] = routes[row["line_id"]]["route_long_name"]
+                    row["route_type"] = routes[row["line_id"]]["route_type"].upper()
+                    row["route_color"] = routes[row["line_id"]]["route_color"]
+                    row["route_id"] = routes[row["line_id"]]["route_id"]
+                else:
+                    print(f"Route for {row['line_id']} not found")
+                    print(json.dumps(row))
+                    print(json.dumps(routes))
+                    print(json.dumps(lines_by_stops))
+                name = f'STIB {row["stop_name"]} - {row["route_type"]} {row["line_id"]} - {destination}'
+                row["direction_id"] = destination
+                row["route_short_name"] = row["line_id"]
+                row["route_text_color"] = "000000"
+                if name in attributes:
+                    pointid = ''.join(i for i in str(row["stop_id"]) if i.isdigit()) 
+                    attributes[name]['stop_ids'].append(pointid)
+                else:
+                    pointid = ''.join(i for i in str(row["stop_id"]) if i.isdigit()) 
+                    row['stop_ids'].append(pointid)
+                    attributes[name] = row
+                if row['stop_id'] not in STIB_STOP_IDS:
+                    STIB_STOP_IDS.append(row['stop_id'])
+                if row['line_id'] not in STIB_LINES:
+                    STIB_LINES.append(row['line_id'])
+    print(json.dumps(attributes))
     return attributes
 
 
@@ -198,9 +208,12 @@ def init(clean = False):
         attributes = getGTFSAttributes()
     else:
         attributes = getSTIBAttributes()
+    if len(attributes) == 0:
+        return
     print("Retrieving STIB-MIVB realtime data")
     passing_times = asyncio.run(STIB.get_passing_times(STIB_STOP_IDS))
     waiting_times = passing_times["waiting_times"]
+    print(json.dumps(passing_times))
     if clean:
         cleanMqtt()
         clean = True;
@@ -247,10 +260,12 @@ def init(clean = False):
         print(f"Sending data for {idx}: {diff}") 
         setAttribute(attribute)
         setState(attribute)
+    #print(json.dumps(attributes))
     return
 
 def setState(attribute):
     key = "stib" + attribute["stop_id"] + attribute["route_short_name"] + attribute["direction_id"] 
+    print(key)
     state = {
                         "arrival": diff_in_minutes(attribute['passing_time'])
             }
