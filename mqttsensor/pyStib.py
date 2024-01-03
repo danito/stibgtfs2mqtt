@@ -42,6 +42,26 @@ class StibData:
                 self.stop_fields[stop_id_num] = {"stop_id" : stop_id, "stop_names" : stop_name, "gps_coordinates" : stop_gps }
         return {"stop_ids" : self.stop_ids, "stop_fields" : self.stop_fields}
     
+    async def get_gtfs_stops(self, stopnames):
+        """Get the stop ids from the stop name."""
+        stop_names = []
+        stop_ids = []
+        stop_fields = {}
+        for stop, stop_name in enumerate(stopnames):
+               stop_names.append(stop_name.upper())
+        q = " OR ".join(' stop_name like "' + item + '"' for item in stop_names)
+        dataset='gtfs-stops-production'
+        stop_data = await self.stib_api.get_stib_data(dataset, q, self.api_key)
+        if stop_data is not None and 'results' in stop_data:
+            for r in stop_data['results']:
+                stop_id = str(r['stop_id'])
+                stop_id_num = str(''.join(i for i in str(stop_id) if i.isdigit()))        
+                stop_name = r["stop_name"]
+                stop_gps  = r['stop_coordinates']
+                stop_ids.append(stop_id)
+                stop_fields[stop_id_num] = {"stop_id" : stop_id, "stop_name" : stop_name, "stop_coordinates" : stop_gps }
+        return {"stop_ids" : stop_ids, "stop_fields" : stop_fields}
+    
     async def get_passing_times(self, stop_ids):
         """Get the stop ids from the stop name."""
         """ delete letters from stop is"""
@@ -101,10 +121,11 @@ class StibData:
 
             for r in stib_data['results']:
                 line_id = str(r['route_short_name'])
+                route_id = str(r['route_id'])
                 route_long_name = r['route_long_name']
                 route_type = r['route_type']
                 route_color = r['route_color']
-                route_details[line_id] = {'route_short_name': line_id, 'route_long_name' : route_long_name, 'route_type' : route_type, 'route_color' : route_color }
+                route_details[line_id] = {'route_id': route_id, 'route_short_name': line_id, 'route_long_name' : route_long_name, 'route_type' : route_type, 'route_color' : route_color }
         return route_details
     
     async def get_gtfs_files(self):

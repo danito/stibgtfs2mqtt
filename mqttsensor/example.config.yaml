@@ -10,3 +10,5 @@ stop_names:
         - "MAX WALLER"
         - "SAINT-DENIS"
         - "FOREST CENTRE"
+clean_on_start: 0
+gtfs: false
