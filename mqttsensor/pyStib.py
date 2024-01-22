@@ -29,7 +29,7 @@ class StibData:
         stop_names = []
         for stop, stop_name in enumerate(stopnames):
                stop_names.append(stop_name.upper())
-        q = " OR ".join(' name like "' + item + '"' for item in stop_names)
+        q = " OR ".join(f' name ="{item.upper()}"' for item in stop_names)
         dataset='stop-details-production'
         stop_data = await self.stib_api.get_stib_data(dataset, q, self.api_key)
         if stop_data is not None and 'results' in stop_data:
@@ -49,7 +49,7 @@ class StibData:
         stop_fields = {}
         for stop, stop_name in enumerate(stopnames):
                stop_names.append(stop_name.upper())
-        q = " OR ".join(' stop_name like "' + item + '"' for item in stop_names)
+        q = " OR ".join(f' stop_name = "{item.upper()}" ' for item in stop_names)
         dataset='gtfs-stops-production'
         stop_data = await self.stib_api.get_stib_data(dataset, q, self.api_key)
         if stop_data is not None and 'results' in stop_data:

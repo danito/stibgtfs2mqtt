@@ -165,7 +165,6 @@ def getSTIBAttributes():
         if stop_id_num in waiting_times:
             print(waiting_times[stop_id_num])
             for idr, row in waiting_times[stop_id_num].items():
-                print(row)
                 row['stop_ids'] = []
                 row['line_id'] = row['lineid']
                 row["stop_id"] = row['pointid']
@@ -198,7 +197,7 @@ def getSTIBAttributes():
                     STIB_STOP_IDS.append(row['stop_id'])
                 if row['line_id'] not in STIB_LINES:
                     STIB_LINES.append(row['line_id'])
-    print(json.dumps(attributes))
+    #print(json.dumps(attributes))
     return attributes
 
 
